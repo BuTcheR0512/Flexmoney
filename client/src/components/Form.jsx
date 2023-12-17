@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Form.css";
+import logo from '../assests/logo.png';
 
 export default function Form() {
   const [user, setUser] = useState({
     name: "",
-    age: "", // Change to Date type
+    age: "", 
     gender: "",
     contact: "",
     fee: "500",
@@ -29,7 +30,14 @@ export default function Form() {
 
   function submitUser(e) {
     e.preventDefault();
-    setError(validate(user));
+    const errors = validate(user);
+
+    // Additional check for the fee
+    if (user.fee !== "500") {
+      errors.fee = "Fee is 500!";
+    }
+  
+    setError(errors);
     isSubmit(true);
   }
 
@@ -46,7 +54,7 @@ export default function Form() {
         age: age.toString(), // Store age as a string
       };
 
-      axios.post("http://localhost:8090/submit", userData).then((res) => console.log(res.data));
+      axios.post("https://yoga-1o5t.onrender.com/submit", userData).then((res) => console.log(res.data));
 
       setUser({
         name: "",
@@ -92,6 +100,10 @@ export default function Form() {
     if (!user.slot) {
       errors.slot = "Select a slot!";
     }
+    if (user.fee !== "500") {
+        errors.fee = "Fee is 500";
+      }  
+    
     return errors;
   };
 
@@ -99,6 +111,7 @@ export default function Form() {
     <div className="box">
       <form autoComplete="off">
         <div className="heading">
+        <img src={logo} alt="Logo" className="logo" />
           <h1>{success ? "Payment Successful" : "Admission Form"}</h1>
         </div>
         {!success && (
@@ -134,7 +147,7 @@ export default function Form() {
               value={user.gender}
               onChange={hadleChange}
             >
-              <option value="" className="option1">
+              <option value="" className="gender">
                 Select Gender
               </option>
               <option value="Male">Male</option>
@@ -143,7 +156,7 @@ export default function Form() {
             </select>
           </div>
         )}
-        {!success && <p>{error.gender}</p>}
+        {!success && <p style={{ color: 'red' }}>{error.gender}</p>}
         {!success && (
           <div className="contact">
             <label>Contact: </label>
@@ -169,6 +182,7 @@ export default function Form() {
             </select>
           </div>
         )}
+         {!success && <p className="error">{error.slot}</p>}
         {!success && (
           <div className="fee">
             <label>Fee: </label>
@@ -179,12 +193,11 @@ export default function Form() {
               value={user.fee}
               onChange={hadleChange}
             ></input>
+             {error.fee && <p className="error">{error.fee}</p>}
           </div>
         )}
-        {/* Remove the error display for fee */}
-        {/* {!success && <p className="error">{error.fee}</p>} */}
-
-        {!success && <p className="error">{error.slot}</p>}
+       
+       
         {!success && (
           <div className="btn">
             <button type="submit" onClick={submitUser}>
