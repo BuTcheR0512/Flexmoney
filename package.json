@@ -1,0 +1,22 @@
+{
+  "name": "yoga",
+  "version": "1.0.0",
+  "description": "Yoga App",
+  "main": "server.js",
+  "scripts": {
+    "start":"node server.js",
+    "server":"nodemon server.js",
+    "build" :"npm i"
+    },
+  "author": "Iyer",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.2"
+  }
+}
