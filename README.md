@@ -26,4 +26,4 @@ This project can be used in the real world if I add a payment method which would
 
 
 
-https://github.com/BuTcheR0512/Flexmoney/issues/1#issue-2046123084
+https://github.com/BuTcheR0512/Flexmoney/assets/86340653/ed8ba651-8c89-41d3-a075-571028b88913
