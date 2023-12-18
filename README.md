@@ -12,7 +12,7 @@
   The Validations which is done in my project are:
 
 1.Every input field is filled by the user.                                  
-2.No field can be left empty.                                                   
+2.No field can be left empty.                                                    
 3.DOB is taken in date type and age is calculated.                                         
 4.Age should be between 18 to 65.                                           
 5.User gets a dropbox to select gender.                                                    
@@ -26,4 +26,4 @@ This project can be used in the real world if I add a payment method which would
 
 
 
-[Screenshot 2023-12-18 143037](https://github.com/BuTcheR0512/Flexmoney/assets/86340653/538761ce-69f0-4168-86d4-7ebfa887430e)
+https://github.com/BuTcheR0512/Flexmoney/blob/main/kike-vega-F2qh3yjz6Jk-unsplash.jpg
