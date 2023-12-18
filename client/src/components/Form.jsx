@@ -32,7 +32,7 @@ export default function Form() {
     e.preventDefault();
     const errors = validate(user);
 
-    // Additional check for the fee
+   
     if (user.fee !== "500") {
       errors.fee = "Fee is 500!";
     }
@@ -43,15 +43,15 @@ export default function Form() {
 
   useEffect(() => {
     if (Object.keys(error).length === 0 && submit) {
-      // Calculate age based on the entered date
+   
       const currentDate = new Date();
       const enteredDate = new Date(user.age);
       const age = currentDate.getFullYear() - enteredDate.getFullYear();
       
-      // Add other fields to the user object before sending it to the server
+     
       const userData = {
         ...user,
-        age: age.toString(), // Store age as a string
+        age: age.toString(), 
       };
 
       axios.post("https://yoga-1o5t.onrender.com/submit", userData).then((res) => console.log(res.data));
@@ -131,7 +131,7 @@ export default function Form() {
           <div className="age">
             <label>Date of Birth: </label>
             <input
-              type="date" // Use date input type
+              type="date"
               name="age"
               value={user.age}
               onChange={hadleChange}

@@ -3,13 +3,13 @@
 .heading {
   text-align: center;
   position: relative;
-  display: flex; /* Make it a flex container */
-  align-items: center; /* Center items vertically */
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-  max-width: 100px; /* Adjust the max-width as needed */
-  margin-right: 10px; /* Add margin to create space between logo and text */
+  max-width: 100px;
+  margin-right: 10px;
 }
 body {
   margin: 0;
@@ -22,13 +22,13 @@ body {
 
 .box {
   position: relative;
-  width: 80%; /* Adjust width as needed */
-  max-width: 400px; /* Set a maximum width */
+  width: 80%; 
+  max-width: 400px;
   margin: 10% auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: rgba(248, 248, 248, 0.8); /* Background with opacity */
+  background-color: rgba(248, 248, 248, 0.8); 
 }
 
 .box::before {
@@ -38,9 +38,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: inherit; /* Inherit background image from the body */
-  opacity: 0.5; /* Adjust the opacity value as needed */
-  z-index: -1; /* Place the pseudo-element behind the box content */
+  background-image: inherit;
+  opacity: 0.5; 
+  z-index: -1; 
 }
 
 .heading {
@@ -92,9 +92,9 @@ button:hover {
   margin-top: 5px;
 }
 
-/* Media queries for responsiveness */
+
 @media screen and (max-width: 600px) {
   .box {
-      width: 90%; /* Adjust width for smaller screens */
+      width: 90%; 
   }
 }
