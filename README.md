@@ -11,8 +11,14 @@ https://yoga-addmission.netlify.app/
 
 
 ## Screenshots
-
+ Registration page:
+ 
 ![Screenshot 2023-12-18 143037](https://github.com/BuTcheR0512/Flexmoney/assets/86340653/ec2d9846-9274-4e4c-87a2-b74511ce0cf9)
+
+ER diagram:
+
+![ER diagram](https://github.com/BuTcheR0512/Flexmoney/assets/86340653/8a80e156-387e-462d-8797-9e72b94472a1)
+
 
 
 ## Tech Stack
@@ -20,6 +26,8 @@ https://yoga-addmission.netlify.app/
 **Client:** Reactjs, Axios, JavaScript, CSS
 
 **Server:** Nodejs, Expressjs, MongoDB
+
+
 
 
 ## Run Locally
@@ -78,3 +86,5 @@ Start the server
 
 
 This project can be used in the real world if I add a payment method which would accpet the payment and a admin and a user pannel is made so that user can view their profile and any payment mismatch is not there on monthly basis.
+
+
